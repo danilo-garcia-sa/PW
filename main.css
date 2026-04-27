@@ -1,0 +1,46 @@
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.seccion-sobre-mi h2,
+.seccion-proyectos h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  border-bottom: 2px solid #333;
+  padding-bottom: 8px;
+}
+
+.seccion-sobre-mi p {
+  line-height: 1.5;
+}
+
+.contenedor-proyectos {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  align-items: "center";
+}
+
+.tarjeta {
+  flex: 1;
+  min-width: 200px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+}
+
+.tarjeta h3 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+a {
+  text-decoration: none;
+}
