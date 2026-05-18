@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="main.css">
+  <title>Carniceria Momera</title>
+</head>
+<body>
+
+<header>
+  <h1>Carniceria Momera</h1>
+  <p>Pedidos online — Te llega con muchos momos</p>
+</header>
+
+<main>
+  <form>
+    <h2>Organiza tu pedido</h2>
+
+    <section>
+      <h3>Tus datos</h3>
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email">
+      <label for="telefono">Teléfono</label>
+      <input type="text" id="telefono" name="telefono">
+    </section>
+
+    <section>
+      <h3>Tipo de Carne</h3>
+      <div class="opcion-checkbox">
+          <input type="checkbox" id="MilanesaT" name="Milanesa Ternera" value="Milanesa">
+          <label for="MilanesaT">Milanesa de Ternera</label>
+
+          <input type="checkbox" id="MilanesaP" name="Milanesa Pollo" value="Milanesa">
+          <label for="MilanesaP">Milanesa de Pollo</label>
+
+          <input type="checkbox" id="jamon" name="jamon" value="jamon">
+          <label for="jamon">Jamón</label>
+
+          <input type="checkbox" id="Pollo" name="Pollo" value="Pollo">
+          <label for="Pollo">Pollo</label>
+
+          <input type="checkbox" id="CarneT" name="Carne de ternera" value="Carne de ternera">
+          <label for="CarneT">Carne de Ternera</label>
+
+          <input type="checkbox" id="Paty" name="Paty" value="Paty">
+          <label for="Paty">Paty</label>
+      </div>
+    </section>
+
+    <section>
+      <h3>Tipo de Corte</h3>
+      <select id="especie" name="especie">
+        <option value="">-- Elegí una --</option>
+        <option value="Clásica">Clásica</option>
+        <option value="Piezitas(Cuadraditos)">Piezitas(Cuadraditos)</option>
+        <option value="Entero">Entero</option>
+        <option value="Feta(Fiambre)">Feta(Fiambre)</option>
+        <option value="Otro (Especifica en Comentarios)">Otro (Especifica en Comentarios)</option>
+      </select>
+    </section>
+
+    <section>
+      <h3>Tamaño / Peso de Bolsa</h3>
+
+      <input type="radio" id="chica" name="cantidad" value="chica">
+        <label for="chica">Bolsa Chica (1kg)</label>
+
+        <input type="radio" id="mediana" name="cantidad" value="mediana">
+        <label for="mediana">Bolsa Mediana (2.5kg)</label>
+
+        <input type="radio" id="grande" name="cantidad" value="grande">
+        <label for="grande">Bolsa Grande (4kg)</label>
+    </section>
+
+    <section>
+      <h3>Cantidad de Bolsas</h3>
+        <label for="cantidad">¿Cuántas bolsas?</label>
+        <input type="number" id="cantidad" name="cantidad" min="1" max="10" value="1">
+    </section>    
+
+    <section>
+      <h3>Comentarios</h3>
+      <label for="comentarios">¿Algo más que quieras contarnos?</label>
+      <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+    </section>
+
+    <p id="mensaje"></p>
+
+    <button type="submit">Hacer Pedido</button>
+  </form>
+</main>
+
+<footer>
+  <p>Carniceria Momera — CABA, Buenos Aires, Argentina</p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
