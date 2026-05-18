@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="mian.css">
+  <title>Veterinaria La Sanacion</title>
+</head>
+<body>
+
+<header>
+  <h1>Veterinaria La Sanacion</h1>
+  <p>Turnos online — Los esperamos</p>
+</header>
+
+<main>
+  <form>
+    <h2>Reservá tu turno</h2>
+
+    <section>
+      <h3>Tus datos</h3>
+      <label for="nombre">Nombre completo</label>
+      <input type="text" id="nombre" name="nombre" required>
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+      <label for="telefono">Teléfono</label>
+      <input type="text" id="telefono" name="telefono">
+    </section>
+
+    <section>
+      <h3>Tu mascota</h3>
+      <label for="mascota">Nombre de la mascota</label>
+      <input type="text" id="mascota" name="mascota" required>
+      <label for="especie">Especie</label>
+      <select id="especie" name="especie" required>
+        <option value="">-- Elegí una --</option>
+        <option value="perro">Perro</option>
+        <option value="gato">Gato</option>
+        <option value="conejo">Conejo</option>
+        <option value="ave">Ave</option>
+        <option value="otro">Otro</option>
+      </select>
+      <label for="edad">Edad (años)</label>
+      <input type="number" id="edad" name="edad" min="0" max="30">
+    </section>
+
+    <section>
+      <h3>Motivo de la consulta</h3>
+      <div class="opcion-radio">
+        <input type="radio" id="control" name="motivo" value="control">
+        <label for="control">Control general</label>
+      </div>
+      <div class="opcion-radio">
+        <input type="radio" id="vacuna" name="motivo" value="vacuna">
+        <label for="vacuna">Vacunación</label>
+      </div>
+      <div class="opcion-radio">
+        <input type="radio" id="cirugia" name="motivo" value="cirugia">
+        <label for="cirugia">Cirugía</label>
+      </div>
+      <div class="opcion-radio">
+        <input type="radio" id="urgencia" name="motivo" value="urgencia">
+        <label for="urgencia">Urgencia</label>
+      </div>
+    </section>
+
+    <section>
+      <h3>Día preferido</h3>
+      <div class="opcion-checkbox">
+        <input type="checkbox" id="lunes" name="dias" value="lunes">
+        <label for="lunes">Lunes</label>
+      </div>
+      <div class="opcion-checkbox">
+        <input type="checkbox" id="miercoles" name="dias" value="miercoles">
+        <label for="miercoles">Miércoles</label>
+      </div>
+      <div class="opcion-checkbox">
+        <input type="checkbox" id="viernes" name="dias" value="viernes">
+        <label for="viernes">Viernes</label>
+      </div>
+      <div class="opcion-checkbox">
+        <input type="checkbox" id="sabado" name="dias" value="sabado">
+        <label for="sabado">Sábado</label>
+      </div>
+    </section>
+
+    <section>
+      <h3>Comentarios</h3>
+      <label for="comentarios">¿Algo más que quieras contarnos?</label>
+      <textarea id="comentarios" name="comentarios" rows="4"></textarea>
+    </section>
+
+    <button type="submit">Pedir turno</button>
+  </form>
+</main>
+
+<footer>
+  <p>Veterinaria La Sanacion — CABA, Buenos Aires, Argentina</p>
+</footer>
+
+</body>
+</html>
