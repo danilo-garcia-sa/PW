@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <!-- Configuración básica de la página -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Linux Distro Explorer</title>
+
+    <!-- Conecta el archivo de estilos -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- Encabezado principal -->
+    <header>
+        <h1>🐧 Linux Distro Explorer</h1>
+        <p>Buscá y filtrá distros de Linux por nombre o familia.</p>
+    </header>
+
+    <main>
+
+        <!-- Controles de búsqueda y filtro -->
+        <section class="controles">
+
+            <!-- Input para buscar distros -->
+            <input
+                type="text"
+                id="busqueda"
+                placeholder="Buscar una distro...">
+
+            <!-- Lista de familias -->
+            <select id="familia">
+                <option value="">Todas las familias</option>
+                <option value="Debian">Debian</option>
+                <option value="Arch">Arch</option>
+                <option value="Fedora">Fedora</option>
+                <option value="Independiente">Independiente</option>
+            </select>
+
+        </section>
+
+        <!-- Muestra cuántas distros hay -->
+        <p id="contador">0 distros encontradas</p>
+
+        <!-- Acá JavaScript va a agregar las cards -->
+        <section id="grilla" class="grilla">
+
+        </section>
+
+    </main>
+
+    <!-- Conecta el archivo JavaScript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
