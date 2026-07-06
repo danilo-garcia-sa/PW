@@ -1,5 +1,4 @@
-const distros = [
-
+const distros = [   
     {
         nombre: "Debian",
         familia: "Debian",
@@ -75,7 +74,7 @@ const distros = [
     {
         nombre: "Garuda Linux",
         familia: "Arch",
-        logo: "https://commons.wikimedia.org/wiki/Special:FilePath/Garuda-logo-wikipedia.svg",
+        logo: "https://cdn.simpleicons.org/garudalinux/5277C3",
         descripcion: "Basado en Arch, pensada para gaming, con Btrfs + snapshots automáticos de fábrica.",
         dificultad: "Media"
     },
@@ -135,34 +134,23 @@ const contador = document.querySelector("#contador");
 // Crea una card
 // =======================
 
-function crearCard(distro){
-
+function crearCard(distro){             
     const card = document.createElement("div");
-
     card.classList.add("card");
-
     card.innerHTML = `
         <img src="${distro.logo}" alt="${distro.nombre}">
-
         <div class="card-contenido">
-
             <p class="familia">${distro.familia}</p>
-
             <h2>${distro.nombre}</h2>
-
             <p class="descripcion">
                 ${distro.descripcion}
             </p>
-
             <p class="dificultad">
                 Dificultad: ${distro.dificultad}
             </p>
-
         </div>
     `;
-
     return card;
-
 }
 
 
@@ -171,21 +159,14 @@ function crearCard(distro){
 // =======================
 
 function renderGrilla(lista){
-
     grilla.innerHTML = "";
-
     lista.forEach(distro => {
-
         const card = crearCard(distro);
-
         grilla.appendChild(card);
-
     });
-
     contador.textContent = lista.length + " distros encontradas";
-
 }
-
+    
 
 // Muestra todas las distros al iniciar
 
@@ -197,11 +178,9 @@ renderGrilla(distros);
 // =======================
 
 function buscar(lista, termino){
-
     return lista.filter(distro =>
         distro.nombre.toLowerCase().includes(termino.toLowerCase())
     );
-
 }
 
 
@@ -210,13 +189,10 @@ function buscar(lista, termino){
 // =======================
 
 function filtrarPorFamilia(lista, familia){
-
     if(familia === ""){
         return lista;
     }
-
     return lista.filter(distro => distro.familia === familia);
-
 }
 
 
@@ -225,17 +201,11 @@ function filtrarPorFamilia(lista, familia){
 // =======================
 
 function buscarYFiltrar(){
-
     const texto = document.querySelector("#busqueda").value;
-
     const familia = document.querySelector("#familia").value;
-
     let resultado = buscar(distros, texto);
-
     resultado = filtrarPorFamilia(resultado, familia);
-
     renderGrilla(resultado);
-
 }
 
 
@@ -246,7 +216,6 @@ function buscarYFiltrar(){
 document
     .querySelector("#busqueda")
     .addEventListener("input", buscarYFiltrar);
-
 document
     .querySelector("#familia")
     .addEventListener("change", buscarYFiltrar);
